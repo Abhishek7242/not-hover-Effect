@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+
+}
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.superhero-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.superhero {
+    height: 400px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.superhero:hover {
+    transform: scale(1.25)!important;
+    z-index: 1;
+}
+
+.superhero-gallery:hover .superhero:not(:hover) {
+    filter: grayscale(100%);
+    transform: scale(0.85);
+    z-index: 0;
+}
+
+
+
+.superhero-gallery img:nth-child(2) {
+    transform: scale(1.1);
+}
+
+.superhero-gallery img:nth-child(3) {
+    transform: scale(1.25);
+    z-index: 1;
+}
+
+.superhero-gallery img:nth-child(4) {
+    transform: scale(1.1);
+}
+
+
